@@ -14,17 +14,21 @@ else if(weight===" " || weight< 0 || isNaN(weight)){
 }
 else {
    const BMI=(weight/((height * height)/10000)).toFixed(3);
-    result.innerHTML=`${BMI}`
+    result.innerHTML=`${BMI}`;
+ const totalresult = document.querySelector("#result-measurement");
+ function Sima(){
+  
+ if(BMI<18.6){
+  totalresult.innerHTML=`Sry you are under weight`
+ }
+ else if(BMI>24.9){
+    totalresult.innerHTML=`You are over weight`
+ }
+else{
+    totalresult.innerHTML=`Congrates you are in normal range`
+}
     
 }
+ Sima();
+}
 });
-
-// if(BMI<18.6){
-//     BMI.innerHTML=`Sry you are under weight`
-// }
-// else if(BMI>24.9){
-//     BMI.innerHTML=`You are over weight`
-// }
-// else{
-//     BMI.innerHTML=`Congrates you are in normal range`
-// }
